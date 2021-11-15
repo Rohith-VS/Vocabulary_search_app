@@ -1,0 +1,8 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.navbarWrapper{
+    @include flex(row,center,space-between);
+    @include wh-100p;
+    background-color: $background-secondary;
+}

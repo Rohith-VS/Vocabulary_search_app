@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./colors.scss";
+@import "./mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  scroll-behavior: smooth;
+  user-select: none; // for native app like behaviour
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $background-contrast;
+  border-radius: 0.2rem;
+
+  &:hover,
+  &:active {
+    background-color: rgba($background-contrast, $alpha: 0.7);
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $background-primary;
+  @include largeScreenTypography;
+}
+
+// base icon color for svg icons
+.base-icon-color {
+  fill: $logo-primary-color;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    @include SmallScreenTypography;
+  }
+}

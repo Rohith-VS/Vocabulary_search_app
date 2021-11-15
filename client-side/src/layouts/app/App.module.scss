@@ -1,0 +1,25 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.appWrapper {
+  @include wh-100v;
+  @include flex(column, center, start);
+  overflow: hidden;
+  position: relative;
+
+  .appCoreWrapper {
+    @include wh-100p;
+    @include flex(column, center, start);
+    overflow: auto;
+    color: $font-primary;
+
+    .appContainer {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      $top-nav-bar-height: 80px;
+      display: grid;
+      grid-template-rows: $top-nav-bar-height 1fr;
+    }
+  }
+}
